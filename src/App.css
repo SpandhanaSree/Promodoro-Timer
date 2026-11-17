@@ -1,0 +1,94 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.timer-container {
+  width: min(90%, 480px);
+  margin: 60px auto;
+  padding: 32px 24px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.timer-container h1 {
+  margin-bottom: 8px;
+  color: #222222;
+}
+
+.subtitle {
+  color: #666666;
+  margin-bottom: 28px;
+}
+
+.mode-selector,
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mode-button,
+.control-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mode-button {
+  background: #eeeeee;
+  color: #333333;
+}
+
+.mode-button.active {
+  background: #ffe5e5;
+  color: #b42318;
+}
+
+.timer-display {
+  margin: 28px 0;
+  font-size: clamp(56px, 14vw, 88px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #222222;
+}
+
+.control-button {
+  background: #eeeeee;
+  color: #222222;
+}
+
+.start-button {
+  background: #c0392b;
+  color: #ffffff;
+}
+
+.reset-button {
+  background: #e5e7eb;
+}
+
+.sessions {
+  margin-top: 28px;
+  color: #555555;
+}
+
+@media (max-width: 480px) {
+  .timer-container {
+    margin: 24px auto;
+    padding: 24px 16px;
+  }
+
+  .mode-button,
+  .control-button {
+    padding: 11px 15px;
+  }
+
+  .timer-controls {
+    gap: 8px;
+  }
+}
