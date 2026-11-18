@@ -190,6 +190,25 @@ setIsRunning(false);
       </p>
     </main>
   );
+
+
+useEffect(() => {
+  console.log('Page loaded at:', new Date().toLocaleTimeString());
+
+  const handlePageShow = (event) => {
+    console.log('Page shown:', {
+      time: new Date().toLocaleTimeString(),
+      restoredFromCache: event.persisted,
+    });
+  };
+
+  window.addEventListener('pageshow', handlePageShow);
+
+  return () => {
+    window.removeEventListener('pageshow', handlePageShow);
+  };
+}, []);
+
 }
 
 export default App;
